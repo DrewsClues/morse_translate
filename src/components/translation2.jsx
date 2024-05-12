@@ -5,6 +5,31 @@ import { Accordion, Card, Button } from 'react-bootstrap';
 const Translate2 = () => {
     const [morse, setMorse] = useState('');
     const [translation, setTranslation] = useState('');
+    const dotDuration = 200;
+    const dashDuration = 400;
+
+
+     // Function for Morse Dot Sound
+    const playMorseDotSound = () => {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(700, audioContext.currentTime);
+        oscillator.connect(audioContext.destination);
+        oscillator.start();
+        setTimeout(() => oscillator.stop(), dotDuration);
+    };
+
+     // Function for Morse Dash Sound
+     const playMorseDashSound = () => {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(700, audioContext.currentTime);
+        oscillator.connect(audioContext.destination);
+        oscillator.start();
+        setTimeout(() => oscillator.stop(), dotDuration);
+    };
 
     const morseToEnglish = (morseCode) => {
         const morseCodeMap = {
@@ -77,6 +102,37 @@ const Translate2 = () => {
     const handleTranslationChange = (event) => {
         setTranslation(event.target.value);
     };
+
+    const handleKeyDown = (event) => {
+        
+        if (event.key === 'Enter') {
+          event.preventDefault(); 
+          if ('speechSynthesis' in window) {
+            // Create a new Speech
+            const speech = new SpeechSynthesisUtterance(translation);
+            // Use the default voice
+            speechSynthesis.speak(speech);
+          } else {
+            alert('Text-to-speech is not supported in your browser.');
+          }
+        }
+
+        if (event.key === '.'){
+            event.preventDefault();
+            setMorse(morse.slice(0, -1));
+        }
+
+        if (event.key === '1') {
+            playMorseDotSound();
+          }
+      
+        if (event.key === '2') {
+        playMorseDashSound();
+        }
+
+
+        
+      };
 
     return (
         <div>
@@ -229,12 +285,18 @@ const Translate2 = () => {
                             <tr>
                                 <td style={{ padding: '2px', fontSize: '16pt'}}>Break:</td>
                                 <td style={{ padding: '2px'}}>3</td>
+
+                                <td style={{ padding: '2px', fontSize: '16pt'}}>Speech:</td>
+                                <td style={{ padding: '2px'}}>Enter</td>
                             </tr>
 
                             <tr>
                                 
                                 <td style={{ padding: '2px', fontSize: '16pt'}}>Space:</td>
                                 <td style={{ padding: '2px'}}>33</td>
+
+                                <td style={{ padding: '2px', fontSize: '16pt'}}>Back:</td>
+                                <td style={{ padding: '2px'}}>Del</td>
                             </tr>
 
                            
@@ -247,6 +309,7 @@ const Translate2 = () => {
                 <textarea
                     value={morse}
                     onChange={handleMorseChange}
+                    onKeyDown={handleKeyDown}
                     style={{ width: '600px', margin: 'auto'}}
                     placeholder="Enter Morse code to translate 1 =. 2 =-, 3 respresents a break between characters, and 33 = space."
                     rows={5}
