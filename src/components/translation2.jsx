@@ -44,6 +44,12 @@ const Translate2 = () => {
             '22211': '8',
             '22221': '9',
             '22222': '0',
+            '121212': '.',
+            '112211': '?',
+            '212122': '!',
+            '221122': ',',
+            '21121': '/',
+            '112212': '-',
             '3': '',
             '33': ' ',
         };
@@ -201,6 +207,26 @@ const Translate2 = () => {
                             </tr>
 
                             <tr>
+                                <td style={{ padding: '2px', fontSize: '16pt'}}>.:</td>
+                                <td style={{ padding: '2px'}}>121212</td>
+
+                                <td style={{ padding: '2px', fontSize: '16pt'}}>?:</td>
+                                <td style={{ padding: '2px'}}>112211</td>
+
+                                <td style={{ padding: '2px', fontSize: '16pt'}}>!:</td>
+                                <td style={{ padding: '2px'}}>212122</td>
+
+                                <td style={{ padding: '2px', fontSize: '16pt'}}>,:</td>
+                                <td style={{ padding: '2px'}}>221122</td>
+
+                                <td style={{ padding: '2px', fontSize: '16pt'}}>/:</td>
+                                <td style={{ padding: '2px'}}>21121</td>
+
+                                <td style={{ padding: '2px', fontSize: '16pt'}}>-:</td>
+                                <td style={{ padding: '2px'}}>112212</td>
+                            </tr>
+
+                            <tr>
                                 <td style={{ padding: '2px', fontSize: '16pt'}}>Break:</td>
                                 <td style={{ padding: '2px'}}>3</td>
                             </tr>
@@ -221,7 +247,7 @@ const Translate2 = () => {
                 <textarea
                     value={morse}
                     onChange={handleMorseChange}
-                    style={{ width: '500px', margin: 'auto'}}
+                    style={{ width: '600px', margin: 'auto'}}
                     placeholder="Enter Morse code to translate 1 =. 2 =-, 3 respresents a break between characters, and 33 = space."
                     rows={5}
                     cols={50}
@@ -231,7 +257,7 @@ const Translate2 = () => {
                 <textarea
                     value={translation}
                     onChange={handleTranslationChange}
-                    style={{ width: '500px', margin: 'auto'}}
+                    style={{ width: '600px', margin: 'auto'}}
                     placeholder="Translation"
                     rows={5}
                     cols={50}
