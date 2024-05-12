@@ -75,6 +75,7 @@ const Translate2 = () => {
             '221122': ',',
             '21121': '/',
             '112212': '-',
+            '122221': `'`,
             '3': '',
             '33': ' ',
         };
@@ -280,6 +281,11 @@ const Translate2 = () => {
 
                                 <td style={{ padding: '2px', fontSize: '16pt'}}>-:</td>
                                 <td style={{ padding: '2px'}}>112212</td>
+                            </tr>
+
+                            <tr> 
+                            <td style={{ padding: '2px', fontSize: '16pt'}}>'</td>
+                                <td style={{ padding: '2px'}}>122221:</td>
                             </tr>
 
                             <tr>
