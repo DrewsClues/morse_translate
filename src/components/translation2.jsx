@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Accordion, Card, Button } from 'react-bootstrap';
+import '../css-sheets/translation-sheet.css';
 
 
 const Translate2 = () => {
@@ -138,171 +139,171 @@ const Translate2 = () => {
     return (
         <div>
             <h1>Morse Code Translator</h1>
-            <Accordion defaultActiveKey={['0']} style={{ width: '600px', margin: 'auto', 'margin-bottom': '4%' }}>
-                <Accordion.Item eventKey="0" style={{ width: '600px' }}>
+            <Accordion defaultActiveKey={['0']} className="Accordion-style">
+                <Accordion.Item eventKey="0" className="Accordion-item" >
                     <Accordion.Header>Morse Code Key</Accordion.Header>
                     <Accordion.Body>
                     <table >
                             <tr>
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>A:</td>
-                                <td style={{ padding: '2px'}}>12</td>
+                                <td className="character-td">A:</td>
+                                <td className="number-td">12</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>B:</td>
-                                <td style={{ padding: '2px'}}>2111</td>
+                                <td className="character-td">B:</td>
+                                <td className="number-td">2111</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>C:</td>
-                                <td style={{ padding: '2px'}}>2121</td>
+                                <td className="character-td">C:</td>
+                                <td className="number-td">2121</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>D:</td>
-                                <td style={{ padding: '2px'}}>211</td>
+                                <td className="character-td">D:</td>
+                                <td className="number-td">211</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>E:</td>
-                                <td style={{ padding: '2px'}}>1</td>
+                                <td className="character-td">E:</td>
+                                <td className="number-td">1</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>F:</td>
-                                <td style={{ padding: '2px'}}>1121</td>
+                                <td className="character-td">F:</td>
+                                <td className="number-td">1121</td>
                             </tr>
 
                             <tr>
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>G:</td>
-                                <td style={{ padding: '2px'}}>221</td>
+                                <td className="character-td">G:</td>
+                                <td className="number-td">221</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>H:</td>
-                                <td style={{ padding: '2px'}}>1111</td>
+                                <td className="character-td">H:</td>
+                                <td className="number-td">1111</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>I:</td>
-                                <td style={{ padding: '2px'}}>11</td>
+                                <td className="character-td">I:</td>
+                                <td className="number-td">11</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>J:</td>
-                                <td style={{ padding: '2px'}}>1222</td>
+                                <td className="character-td">J:</td>
+                                <td className="number-td">1222</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>K:</td>
-                                <td style={{ padding: '2px'}}>212</td>
+                                <td className="character-td">K:</td>
+                                <td className="number-td">212</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>L:</td>
-                                <td style={{ padding: '2px'}}>1211</td>
+                                <td className="character-td">L:</td>
+                                <td className="number-td">1211</td>
                             </tr>
 
                             <tr>
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>M:</td>
-                                <td style={{ padding: '2px'}}>22</td>
+                                <td className="character-td">M:</td>
+                                <td className="number-td">22</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>N:</td>
-                                <td style={{ padding: '2px'}}>21</td>
+                                <td className="character-td">N:</td>
+                                <td className="number-td">21</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>O:</td>
-                                <td style={{ padding: '2px'}}>222</td>
+                                <td className="character-td">O:</td>
+                                <td className="number-td">222</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>P:</td>
-                                <td style={{ padding: '2px'}}>1221</td>
+                                <td className="character-td">P:</td>
+                                <td className="number-td">1221</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>Q:</td>
-                                <td style={{ padding: '2px'}}>2212</td>
+                                <td className="character-td">Q:</td>
+                                <td className="number-td">2212</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>R:</td>
-                                <td style={{ padding: '2px'}}>121</td>
+                                <td className="character-td">R:</td>
+                                <td className="number-td">121</td>
                             </tr>
 
                             <tr>
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>S:</td>
-                                <td style={{ padding: '2px'}}>111</td>
+                                <td className="character-td">S:</td>
+                                <td className="number-td">111</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>T:</td>
-                                <td style={{ padding: '2px'}}>2</td>
+                                <td className="character-td">T:</td>
+                                <td className="number-td">2</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>U:</td>
-                                <td style={{ padding: '2px'}}>112</td>
+                                <td className="character-td">U:</td>
+                                <td className="number-td">112</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>V:</td>
-                                <td style={{ padding: '2px'}}>1112</td>
+                                <td className="character-td">V:</td>
+                                <td className="number-td">1112</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>W:</td>
-                                <td style={{ padding: '2px'}}>122</td>
+                                <td className="character-td">W:</td>
+                                <td className="number-td">122</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>X:</td>
-                                <td style={{ padding: '2px'}}>2112</td>
+                                <td className="character-td">X:</td>
+                                <td className="number-td">2112</td>
                             </tr>
 
                             <tr>
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>Y:</td>
-                                <td style={{ padding: '2px'}}>2122</td>
+                                <td className="character-td">Y:</td>
+                                <td className="number-td">2122</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>Z:</td>
-                                <td style={{ padding: '2px'}}>2211</td>
+                                <td className="character-td">Z:</td>
+                                <td className="number-td">2211</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>1:</td>
-                                <td style={{ padding: '2px'}}>12222</td>
+                                <td className="character-td">1:</td>
+                                <td className="number-td">12222</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>2:</td>
-                                <td style={{ padding: '2px'}}>11222</td>
+                                <td className="character-td">2:</td>
+                                <td className="number-td">11222</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>3:</td>
-                                <td style={{ padding: '2px'}}>11122</td>
+                                <td className="character-td">3:</td>
+                                <td className="number-td">11122</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>4:</td>
-                                <td style={{ padding: '2px'}}>11112</td>
+                                <td className="character-td">4:</td>
+                                <td className="number-td">11112</td>
                             </tr>
 
                             <tr>
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>5:</td>
-                                <td style={{ padding: '2px'}}>11111</td>
+                                <td className="character-td">5:</td>
+                                <td className="number-td">11111</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>6:</td>
-                                <td style={{ padding: '2px'}}>21111</td>
+                                <td className="character-td">6:</td>
+                                <td className="number-td">21111</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>7:</td>
-                                <td style={{ padding: '2px'}}>22111</td>
+                                <td className="character-td">7:</td>
+                                <td className="number-td">22111</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>8:</td>
-                                <td style={{ padding: '2px'}}>22211</td>
+                                <td className="character-td">8:</td>
+                                <td className="number-td">22211</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>9:</td>
-                                <td style={{ padding: '2px'}}>22221</td>
+                                <td className="character-td">9:</td>
+                                <td className="number-td">22221</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>0:</td>
-                                <td style={{ padding: '2px'}}>22222</td>
+                                <td className="character-td">0:</td>
+                                <td className="number-td">22222</td>
                             </tr>
 
                             <tr>
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>.:</td>
-                                <td style={{ padding: '2px'}}>121212</td>
+                                <td className="character-td">.:</td>
+                                <td className="number-td">121212</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>?:</td>
-                                <td style={{ padding: '2px'}}>112211</td>
+                                <td className="character-td">?:</td>
+                                <td className="number-td">112211</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>!:</td>
-                                <td style={{ padding: '2px'}}>212122</td>
+                                <td className="character-td">!:</td>
+                                <td className="number-td">212122</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>,:</td>
-                                <td style={{ padding: '2px'}}>221122</td>
+                                <td className="character-td">,:</td>
+                                <td className="number-td">221122</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>/:</td>
-                                <td style={{ padding: '2px'}}>21121</td>
+                                <td className="character-td">/:</td>
+                                <td className="number-td">21121</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>-:</td>
-                                <td style={{ padding: '2px'}}>112212</td>
+                                <td className="character-td">-:</td>
+                                <td className="number-td">112212</td>
                             </tr>
 
                             <tr> 
-                            <td style={{ padding: '2px', fontSize: '16pt'}}>'</td>
-                                <td style={{ padding: '2px'}}>122221:</td>
+                            <td className="character-td">'</td>
+                                <td className="number-td">122221:</td>
                             </tr>
 
                             <tr>
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>Break:</td>
-                                <td style={{ padding: '2px'}}>3</td>
+                                <td className="character-td">Break:</td>
+                                <td className="number-td">3</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>Speech:</td>
-                                <td style={{ padding: '2px'}}>Enter</td>
+                                <td className="character-td">Speech:</td>
+                                <td className="number-td">Enter</td>
                             </tr>
 
                             <tr>
                                 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>Space:</td>
-                                <td style={{ padding: '2px'}}>33</td>
+                                <td className="character-td">Space:</td>
+                                <td className="number-td">33</td>
 
-                                <td style={{ padding: '2px', fontSize: '16pt'}}>Back:</td>
-                                <td style={{ padding: '2px'}}>Del</td>
+                                <td className="character-td">Back:</td>
+                                <td className="number-td">Del</td>
                             </tr>
 
                            
@@ -314,9 +315,9 @@ const Translate2 = () => {
             <div>
                 <textarea
                     value={morse}
+                    className='translation_area'
                     onChange={handleMorseChange}
                     onKeyDown={handleKeyDown}
-                    style={{ width: '600px', margin: 'auto'}}
                     placeholder="Enter Morse code to translate 1 =. 2 =-, 3 respresents a break between characters, and 33 = space."
                     rows={5}
                     cols={50}
@@ -325,8 +326,8 @@ const Translate2 = () => {
             <div>
                 <textarea
                     value={translation}
+                    className='translation_area'
                     onChange={handleTranslationChange}
-                    style={{ width: '600px', margin: 'auto'}}
                     placeholder="Translation"
                     rows={5}
                     cols={50}

@@ -1,0 +1,55 @@
+.character-td{
+    padding: 2px;
+    font-size: 18pt;
+    font-weight: bold;
+    color: black;
+}
+
+.number-td{
+    padding: 2px;
+    font-size: 16pt;
+    font-weight: bold;
+    color: rgb(47, 47, 161);
+}
+
+.Accordion-style{
+    width: 800px;
+    margin: auto;
+    margin-bottom: 4%;
+    border-radius: 10px;
+}
+
+.accordion-button{
+    background-color: #a09f9f;
+    color: black;
+    font-size: 18pt;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #dddddd;
+    color: black;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+  }
+
+.accordion-item{
+    width: 800px;
+    border-radius: 10px;
+}
+
+.translation_area{
+    width: 800px;
+    margin: auto;
+    font-size: 16pt;
+    background-color: #dddddd;
+    color: black;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: 'Heebo', sans-serif;
+    transition: all 0.2s;
+}
+
+
